@@ -28,7 +28,7 @@ app_license = "MIT"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+page_js = {"point-of-sale" : "public/js/pos.js"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
@@ -133,7 +133,7 @@ app_license = "MIT"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "pos_ab.event.get_events"
+# 	"erpnext.controllers.queries.get_batch_no": "pos_ab.pos_ab.main.get_batch_no"
 # }
 #
 # each overriding function accepts a `data` argument;
@@ -186,3 +186,11 @@ user_data_fields = [
 # Recommended only for DocTypes which have limited documents with untranslated names
 # For example: Role, Gender, etc.
 # translated_search_doctypes = []
+fixtures = [
+	{
+		"doctype": "Custom Field",
+		"filters": [
+			["name", "in", ("POS Profile-automatically_select_oldest_item_batch_number")]
+		]
+	}
+]
