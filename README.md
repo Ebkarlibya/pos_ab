@@ -1,6 +1,8 @@
 ## Pos Ab
 
-Auto select old batch item in the POS Page
+Auto select oldest batch item in the POS Page (Item Details)
+
+to enable go to POS Profile and check (Automatically Select Oldest Item Batch Number)
 
 #### License
 
